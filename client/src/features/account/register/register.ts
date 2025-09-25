@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RegisterCreds } from '../../../types/registerCreds';
 import { User } from '../../../types/user';
@@ -12,12 +12,13 @@ import { User } from '../../../types/user';
 export class Register {
   protected creds = {} as RegisterCreds;
   membersFromHome = input.required<User[]>();
+  cancelRegister = output<boolean>();
 
   register(): void {
     console.log(this.creds);
   }
 
   cancel(): void {
-    console.log("Cancel executed");
+    this.cancelRegister.emit(false);
   }
 }
