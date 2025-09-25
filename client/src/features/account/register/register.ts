@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RegisterCreds } from '../../../types/registerCreds';
+import { User } from '../../../types/user';
 
 @Component({
   selector: 'app-register',
@@ -10,6 +11,7 @@ import { RegisterCreds } from '../../../types/registerCreds';
 })
 export class Register {
   protected creds = {} as RegisterCreds;
+  membersFromHome = input.required<User[]>();
 
   register(): void {
     console.log(this.creds);
