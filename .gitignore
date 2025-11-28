@@ -418,6 +418,8 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
-*.db*
 API/dating.db-shm
 API/dating.db-wal
+
+# SQLite database files
+*.db*
