@@ -3,7 +3,7 @@
   "defaultVariables": null,
   "documentGenerator": {
     "aspNetCoreToOpenApi": {
-      "project": "../../../../../../nswag/document-generator/$(Project)",
+      "project": "$(Project)",
       "documentName": "v1",
       "msBuildProjectExtensionsPath": null,
       "configuration": "$(Configuration)",
@@ -14,7 +14,7 @@
       "verbose": false,
       "workingDirectory": null,
       "aspNetCoreEnvironment": "Development",
-      "output": "../../../../../../openapi-specs/openapi.json",
+      "output": "../../openapi-specs/openapi.json",
       "newLineBehavior": "Auto"
     }
   },
